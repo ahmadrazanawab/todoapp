@@ -25,7 +25,7 @@ const TodoList = ({ todo}) => {
     
 
   return (
-      <div className="mb-10 mx-2">
+      <div className="mb-5 mx-2">
         <div className='shadow-lg rounded-lg bg-[#ddd] py-4 px-6 text-center'>
               <div className="mb-4 flex justify-center  font-semibold">
                   {isEditing ? <input type="text" value={etitle} onChange={(e)=>{{setEtitle(e.target.value)}setIsEditing(true)}} className="text-xl  w-[95%] text-gray-600 rounded outline-none " />

@@ -7,7 +7,7 @@ import { IoMdAdd } from "react-icons/io";
 
 
 
-const Navbar = ({ showModalBtn }) => {
+const Navbar = ({ showModalBtn,setQuarry}) => {
     const [open, setOpen] = useState(false);
     // button color = "#4CAF50"
   return (
@@ -29,7 +29,7 @@ const Navbar = ({ showModalBtn }) => {
                       <button onClick={showModalBtn} className='flex md:mx-2 items-center bg-sky-500 text-white px-4 md:px-6 py-2 rounded-md md:py-2  md:my-0 my-4  font-semibold'><span><IoMdAdd className="text-white size-5 " /></span><small>Add Note</small></button>
                       <button className='flex md:mx-2 items-center bg-red-500 text-white px-4 md:px-6 py-2 rounded-md md:py-2  md:my-0 my-4  font-semibold'><span><RiDeleteBin5Line className="text-white size-5 " /></span><small>Delete All</small></button>
                       <label htmlFor="srch" className="flex items-center justify-end">
-                      <input type="text" className="md:px-4 md:py-2 md:bg-gradient-to-r md:from-[#ddd] md:to-transparent border-[1px] border-[#333] w-full mx-4 my-2 px-4 py-2 outline-none rounded-lg " id='srch' placeholder='Search here...' />  
+                      <input type="text" onChange={(e)=>{setQuarry(e.target.value)}} className="md:px-4 md:py-2 md:bg-gradient-to-r md:from-[#ddd] md:to-transparent border-[1px] border-[#333] w-full mx-4 my-2 px-4 py-2 outline-none rounded-lg " id='srch' placeholder='Search here...' />  
                           <FiSearch className="flex absolute mr-6" />
                     </label>
                   </form>

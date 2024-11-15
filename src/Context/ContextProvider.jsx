@@ -28,8 +28,8 @@ const ContextProvider = ({ children }) => {
             title,
             description,
         }
-        let newTodo = await setTodos([...todos, todo]);
-        console.log(newTodo);
+       setTodos([...todos, todo]);
+        
     }
 
 
@@ -42,7 +42,6 @@ const ContextProvider = ({ children }) => {
 
     // update todo
     const updateTodo = async (id,title,description) => {
-       // setTodos(todos.map((todo) => (todo.id !== id ? { ...todo, title, description } : todo)))
         let newNotes = todos;
        for (let i = 0; i < newNotes.length; i++){
            const element = newNotes[i];
