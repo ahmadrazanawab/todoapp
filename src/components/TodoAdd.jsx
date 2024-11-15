@@ -17,7 +17,7 @@ const TodoAdd = ({showModal,setShowModal,onClosed}) => {
     <div className="flex justify-center mb-5">
           <Model isVisible={showModal} onClose={() => setShowModal(false)}>
                   <div className="mb-4 px-6 text-left">
-                  <h3 className="mb-4 text-xl font-medium text-gray-900">Edit Note</h3>
+                  <h3 className="mb-4 text-xl font-medium text-gray-900">Add Todo</h3>
                   <form action="" className="space-y-6">
                       <div>
                           <label htmlFor="title" className="block mb-2 text-sm font-medium text-gray-600">Title</label>

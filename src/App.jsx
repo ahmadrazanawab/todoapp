@@ -22,7 +22,7 @@ const App = () => {
               <Navbar showModalBtn={showModalBtn}/>
               <div>
                   <TodoAdd showModal={showModal}  setShowModal={setShowModal} onClosed={onClosed} />
-              <Todo />
+              <Todo showModal={showModal}  setShowModal={setShowModal} onClosed={onClosed} showModalBtn={showModalBtn}/>
               </div>
         </ContextProvider>
     </>
