@@ -6,10 +6,12 @@ import TodoAdd from "./components/TodoAdd";
 
 const App = () => {
     const [showModal, setShowModal] = useState(false);
+    const [open, setOpen] = useState(false);
     const [quarry, setQuarry] = useState('');
     const showModalBtn = (e) => {
         e.preventDefault();
         setShowModal(true)
+        setOpen(!open);
     }
     
     const onClosed = (e) => {
@@ -19,7 +21,7 @@ const App = () => {
   return (
       <>
           <ContextProvider>
-              <Navbar showModalBtn={showModalBtn} setQuarry={setQuarry}/>
+              <Navbar showModalBtn={showModalBtn} open={open} setOpen={setOpen} setQuarry={setQuarry}/>
               <div>
                   <TodoAdd showModal={showModal}  setShowModal={setShowModal} onClosed={onClosed} />
                   <Todo quarry={quarry} setQuarry={setQuarry} />
