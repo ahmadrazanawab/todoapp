@@ -2,25 +2,8 @@ import React, { useState } from 'react'
 import noteProvider from './Context'
 import { v4 as uuidv4 } from 'uuid';
 const ContextProvider = ({ children }) => {
-    const todosIntial = [
-        {
-            id: uuidv4(),
-            title: "Title1",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis cupiditate! Doloribus cum alias expedita nulla excepturi sint quos assumenda autem ipsum! Optio, quos illum!",
-        },
-        {
-            id: uuidv4(),
-            title: "Title2",
-            description: " Doloribus cum alias expedita nulla quos assumenda autem ipsum! Optio, quos illum!",
-        },
-        {
-            id: uuidv4(),
-            title: "Title3",
-            description: "excepturi sint quos assumenda autem ipsum! Optio, quos illum!",
-        },
-        
-    ]
-    const [todos, setTodos] = useState(todosIntial);
+    
+    const [todos, setTodos] = useState([]);
     // add todo
     const addTodo = async (title, description) => {
         const todo = {
