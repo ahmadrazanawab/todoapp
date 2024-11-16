@@ -34,7 +34,7 @@ const TodoList = ({ todo}) => {
                   {isEditing ? <textarea name="" value={edescription} onChange={(e)=>{{setEdescription(e.target.value)}setIsEditing(true)}} id="" cols="40" className="text-xl outline-none"></textarea>
                   : <p className=''>{todo.description}</p>}
               </div>
-              <p className="mt-4">13/11/2024 8:40pm</p> 
+              <p className="my-3 text-sm">{new Date().toGMTString()}</p> 
               <div className="flex justify-between">
                   {isEditing ? <button onClick={hanleUpdateTodo} className="px-2 py-2 rounded text-xl text-[#fff] bg-sky-400 w-full border-[1px] border-sky-600 cursor-pointer outline-none">save</button>: (<>
                     <FaRegEdit onClick={()=>{{setIsEditing(true)}handleEditNote(todo)}} className="text-sky-500  cursor-pointer size-10  p-1 border-[1px] border-sky-600 rounded-sm hover:bg-sky-500 hover:text-sky-700 "   />

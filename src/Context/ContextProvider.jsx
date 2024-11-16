@@ -39,6 +39,12 @@ const ContextProvider = ({ children }) => {
          setTodos(deleteTodo);
         console.log(deleteTodo);
     }
+    // all delete todo
+    const allDeleteTodo = () => {
+       setTodos([]);
+    }
+
+
 
     // update todo
     const updateTodo = async (id,title,description) => {
@@ -57,7 +63,7 @@ const ContextProvider = ({ children }) => {
     
     
   return (
-    <noteProvider.Provider value={{todos,setTodos,addTodo,deleteTodo,updateTodo}}>
+    <noteProvider.Provider value={{todos,setTodos,addTodo,deleteTodo,updateTodo,allDeleteTodo}}>
           {children}
     </noteProvider.Provider>
   )
